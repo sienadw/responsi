@@ -6,7 +6,7 @@ import '../services/meal_detail_service.dart';
 class MealDetailPage extends StatefulWidget {
   final String idMeal;
 
-  const MealDetailPage({Key? key, required this.idMeal}) : super(key: key);
+  const MealDetailPage({super.key, required this.idMeal});
 
   @override
   State<MealDetailPage> createState() => _MealDetailPageState();
@@ -94,7 +94,7 @@ class _MealDetailPageState extends State<MealDetailPage> {
                           "- $ingredient",
                           style: Theme.of(context).textTheme.bodyMedium,
                         );
-                      }).toList(),
+                      }),
                       const SizedBox(height: 16.0),
                       Text(
                         "Instructions",
