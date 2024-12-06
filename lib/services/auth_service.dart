@@ -4,14 +4,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class authServices {
   static void simpanAkun(String username, String password) async {
-    //bikin shared preferencesnya
     SharedPreferences sharedPref = await SharedPreferences.getInstance();
 
-    //simpan datanya ke lokal
     sharedPref.setString('username', username);
     sharedPref.setString('password', password);
 
-    //nyoba ngambil data yang disimpan
     print(sharedPref.getString('username'));
     print(sharedPref.getString('password'));
   }

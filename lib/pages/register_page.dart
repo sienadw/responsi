@@ -121,7 +121,9 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   Widget registerButton() {
-    return ElevatedButton(
+  return SizedBox(
+    width: double.infinity, // Membuat tombol memanjang sesuai lebar halaman
+    child: ElevatedButton(
       onPressed: () {
         if (_formKey.currentState!.validate()) {
           authServices.simpanAkun(username, password);
@@ -146,8 +148,10 @@ class _RegisterPageState extends State<RegisterPage> {
         'Register',
         style: TextStyle(fontSize: 16, color: Colors.white),
       ),
-    );
-  }
+    ),
+  );
+}
+
 
   Widget loginText() {
     return Center(

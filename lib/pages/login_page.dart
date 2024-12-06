@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:responsi_mobile_124220111/pages/home_page.dart';
 import '../services/auth_service.dart';
-//import '../pages/home_page.dart';
 import '../pages/register_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -22,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => HomePage(username: '', password: '', category: '',
+        builder: (context) => const HomePage(username: '', password: '',
         ),
       ),
     );
